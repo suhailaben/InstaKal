@@ -1,19 +1,32 @@
 const express = require('express');
-const gravatar = require('gravatar');
-const bcrypt = require('bcryptjs');
 const router = express.Router();
 const User = require('../../models/User')
+const gravatar = require('gravatar');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const keys = require('../../config/keys');
+const passport = require('passport');
+
+// Load input validation
+const validateRegisterInput = require('../../valiation/register');
+const validateLoginInput = require('../../valiation/login');
 
 // @route  POST api/users/register
 // @desc   Register user (description of my API)
 // @access Public (Publicly open to anybody)
 router.post('/register', (req, res) => {
+  const {errors, isValid} = validateRegisterInput(req.body);
+
+  // Check validation 
+  if (!isValid) {
+    return res.status(400).json(errors)
+  }
+
   User.findOne({email: req.body.email})
     .then(user => {
       if (user) {
-        return res.status(400).json({
-          email: 'Email already exists'
-        })
+        errors.email = 'Email already exists';
+        return res.status(400).json(errors)
       } else {
         // Make a call to the gravatar API 
         const avatar = gravatar.url(req.body.email, {
@@ -26,8 +39,8 @@ router.post('/register', (req, res) => {
           email: req.body.email,
           fullName: req.body.fullName, 
           userName: req.body.userName,
-          password: req.body.password,
-          avatar
+          avatar,
+          password: req.body.password
         });
 
         // Generate salt (key)
@@ -51,6 +64,12 @@ router.post('/register', (req, res) => {
 // @desc   Login user (description of my API)
 // @access Public (Publicly open to anybody)
 router.post('/login', (req,res) => {
+  const {errors, isValid} = validateLoginInput(req.body);
+
+  // Check validation 
+  if (!isValid) {
+    return res.status(400).json(errors)
+  }
   const email = req.body.email;
   const password = req.body.password;
 
@@ -58,12 +77,48 @@ router.post('/login', (req,res) => {
   User.findOne({email})
     .then(user => {
       if (!user) {
-        return res.status(404).json({
-          email: 'User not found'
-        });
+        errors.email = 'User not found';
+        return res.status(404).json(errors);
       }
+
+      // Check password 
+      bcrypt.compare(password, user.password)
+        .then(isMatch => {
+          if (isMatch) {
+            // User matched 
+            const payload = {
+              id: user.id,
+              fullName: user.fullName,
+              userName: user.userName,
+              avatar: user.avatar
+            };
+
+            // Sign a token => jwt.sign(payload, key, expiredTime, callback)
+            jwt.sign(
+              payload,
+              keys.secretOrKey,
+              {expiredIn: 3600},
+              (err, token) => {
+                return res.json({
+                  success: true,
+                  token: 'Bearer ' + token
+                });
+              });
+          } else {
+            errors.password = 'Password incorrect';
+            return res.status(400).json(errors);
+          }
+        })
     })
     .catch(err => console.log(err));
 })
+
+// @route   GET api/users/current 
+// @desc    Return current user
+// @access  private
+router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
+  res.json(req.user);
+})
+
 
 module.exports = router;
