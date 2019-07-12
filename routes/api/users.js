@@ -8,8 +8,8 @@ const keys = require('../../config/keys');
 const passport = require('passport');
 
 // Load input validation
-const validateRegisterInput = require('../../valiation/register');
-const validateLoginInput = require('../../valiation/login');
+const validateRegisterInput = require('../../validation/register');
+const validateLoginInput = require('../../validation/login');
 
 // @route  POST api/users/register
 // @desc   Register user (description of my API)

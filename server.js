@@ -1,6 +1,6 @@
 const express = require('express');
 const users = require('./routes/api/users');
-const posts = require('./routes/api/post');
+const posts = require('./routes/api/posts');
 const profile = require('./routes/api/profile');
 
 // Bring in my bodyParser 
