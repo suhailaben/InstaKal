@@ -9,7 +9,12 @@ const PostSchema = new Schema({
   },
   text: {
     type: String,
+    required: false
+  },
+  photo: {
+    type: String,
     required: true
+
   },
   name: {
     type: String
