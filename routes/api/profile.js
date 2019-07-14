@@ -111,6 +111,8 @@ router.post(
     const profileFields = {};
     profileFields.user = req.user.id;
     if (req.body.handle) profileFields.handle = req.body.handle;
+    if (req.body.avatar) profileFields.avatar = req.body.avatar;
+    if (req.body.name) profileFields.name = req.body.name;
     if (req.body.company) profileFields.company = req.body.company;
     if (req.body.location) profileFields.location = req.body.location;
     if (req.body.bio) profileFields.bio = req.body.bio;
