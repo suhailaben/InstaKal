@@ -27,11 +27,11 @@ app.use(passport.initialize());
 // Passport config 
 require('./config/passport')(passport);
 
-app .get('/', (req, res) => res.send('Hello'));
+app.get('/', (req, res) => res.send('Hello World'));
 
 app.use('/api/users', users);
-app.use('/api/posts', posts);
 app.use('/api/profile', profile);
+app.use('/api/posts', posts);
 
-const port = 5005;
+const port = 5004;
 app.listen(port, () => console.log(`server is running on port ${port}`));
