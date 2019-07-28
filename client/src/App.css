@@ -4,12 +4,10 @@ img {
 .navbar {
   background: #833ab4;
   background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  
-  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
-
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
 }
 
-
-.landing {
+/* .landing {
   position: relative;
   background: url('./img/instagram.png') no-repeat;
   background-size: Contain;
@@ -18,7 +16,7 @@ img {
   height: 100vh;
   margin-top: -24px;
   margin-bottom: -48px;
-}
+} */
 
 .landing-inner {
   padding-top: 80px;
@@ -46,14 +44,42 @@ img {
   color: #bbb !important;
 }
 
+footer {
+  background: #833ab4; 
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+}
+
+/* new style */
+
 .black-font {
   color: black;
 }
 
+.btn {
+  background-color: #3897f0;
+  color: #ffffff;
+}
 
-footer {
-  background: #833ab4; 
-  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
-  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
+.instaphone {
+  width: 350px;
+}
 
+.landing {
+  background-color: #fafaf8; 
+  color: black;
+}
+
+nav {
+  background: #833ab4! important; 
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4)! important; 
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4)! important; 
+}
+
+.navbar-letter {
+  color: black! important;
+}
+
+.navbar-lightgray {
+  color: lightgray! important;
 }
