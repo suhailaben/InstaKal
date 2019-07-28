@@ -1,12 +1,6 @@
 img {
   width: 100%;
 }
-.navbar {
-  background: #833ab4;
-  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  
-  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-
-}
 
 /* .landing {
   position: relative;
@@ -43,6 +37,14 @@ img {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+/* new style */
+
+.navbar {
+  background: #833ab4;
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
 }
 
 footer {
@@ -83,10 +85,20 @@ nav {
 
 .navbar-letter {
   color: black! important;
-  
+}
+.black-font {
+  color: black;
 }
 
-.navbar-lightgray {
+.lightgray-font {
   color: lightgray! important;
 
+}
+
+.gray-font {
+  color: gray! important;
+}
+
+.instagram-logo {
+  font-family: 'Norican', cursive;
 }
