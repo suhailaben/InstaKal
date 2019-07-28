@@ -5,6 +5,7 @@ img {
   background: #833ab4;
   background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  
   background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+
 }
 
 /* .landing {
@@ -48,12 +49,16 @@ footer {
   background: #833ab4; 
   background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
   background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* new style */
 
 .black-font {
   color: black;
+  
 }
 
 .btn {
@@ -78,8 +83,10 @@ nav {
 
 .navbar-letter {
   color: black! important;
+  
 }
 
 .navbar-lightgray {
   color: lightgray! important;
+
 }
