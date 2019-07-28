@@ -1,13 +1,20 @@
 img {
   width: 100%;
 }
+.navbar {
+  background: #833ab4;
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
+
+}
+
 
 .landing {
   position: relative;
   background: url('./img/instagram.png') no-repeat;
-  background-size: contain;
+  background-size: Contain;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position:  left; 
   height: 100vh;
   margin-top: -24px;
   margin-bottom: -48px;
@@ -41,4 +48,12 @@ img {
 
 .black-font {
   color: black;
+}
+
+
+footer {
+  background: #833ab4; 
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
+
 }
