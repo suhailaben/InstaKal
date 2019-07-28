@@ -17,8 +17,7 @@ export default class Landing extends Component {
               </h1>
               <h2 className="instagram-logo display-3 mb-4 gray-font">for developers
               </h2>
-              <p className="lead black-font"> Sign up to see photos and videos from your developer friends.</p>
-              <hr />
+              <p className="lead black-font"> Sign up to share photos and videos with your friends in the developer community.</p>
               <Link to="/register" className="btn btn-lg btn-info mr-2">Sign Up</Link>
               <Link to="login" className="btn btn-lg btn-light">Login</Link>
             </div>
