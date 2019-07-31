@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import axios from 'axios';
 import classnames from 'classnames';
 import {registerUser} from '../../actions/authActions';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class Register extends Component {
   constructor() {
@@ -26,7 +26,6 @@ class Register extends Component {
   onChange(e) {
     // Change state
     // setState(stateToChange, newValueToCome)
-    // console.log('this? ',this); // => Register
     this.setState({[e.target.name]:e.target.value})
   }
 
@@ -44,14 +43,14 @@ class Register extends Component {
     };
 
     // Trigger registerAction
-    this.props.registerUser(newUser);
+    this.props.registerUser(newUser, this.props.history);
 
-    // // Ready to fire my API
-    // // Call axios.post('the path of my API, newUser)
-    // axios
-    //   .post('/api/users/register', newUser)
-    //   .then(res => console.log(res.data))
-    //   .catch(err => this.setState({errors: err.response.data}));
+    // Get new data (props) from Redux
+    componentWillReceiveProps(nextProps) {
+     if(nextProps.errors) {
+       this.setState({errors: nextProps.errors});
+     }
+    }
   }
 
   render() {
@@ -59,7 +58,7 @@ class Register extends Component {
     const {errors} = this.state;
     return (
       <div className="register">
-        {user? user.name : null}
+        {user? user.email : null}
       <div className="container">
         <div className="row">
           <div className="col-md-8 m-auto">
@@ -96,9 +95,16 @@ class Register extends Component {
   }
 }
 
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+}
+
 // Extract data from the state to UI
 const mapStateToProps = (state) => ({
-  auth: state.auth
+  auth: state.auth,
+  errors: state.errors
 });
 
 // Connect Register component with registerUser action
