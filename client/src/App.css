@@ -2,19 +2,22 @@ img {
   width: 100%;
 }
 
-/* .landing {
+.landing {
   position: relative;
-  background: url('./img/instagram.png') no-repeat;
+  /* background: url('./img/instagram.png') no-repeat;
   background-size: Contain;
   background-repeat: no-repeat;
   background-position:  left; 
-  height: 100vh;
+  height: 100vh; */
   margin-top: -24px;
   margin-bottom: -48px;
-} */
+  background-color: #fafaf8; 
+  color: black;
+}
 
 .landing-inner {
-  padding-top: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 /* .dark-overlay {
@@ -43,7 +46,7 @@ img {
 
 .navbar {
   background: #833ab4;
-  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
   background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
 }
 
@@ -51,16 +54,9 @@ footer {
   background: #833ab4; 
   background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
   background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
-}
-
-/* new style */
-
-.black-font {
-  color: black;
-  
 }
 
 .btn {
@@ -72,27 +68,18 @@ footer {
   width: 350px;
 }
 
-.landing {
-  background-color: #fafaf8; 
-  color: black;
-}
-
 nav {
   background: #833ab4! important; 
   background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4)! important; 
   background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4)! important; 
 }
 
-.navbar-letter {
-  color: black! important;
-}
 .black-font {
   color: black;
 }
 
 .lightgray-font {
   color: lightgray! important;
-
 }
 
 .gray-font {
