@@ -44,7 +44,6 @@ class Dashboard extends Component {
                </div>
              </div>         
            </div>
-           {/* </div> */}
 
            {/* Edited
            <div className="profile-list">
