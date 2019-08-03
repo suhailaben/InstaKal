@@ -161,10 +161,11 @@ li {
   margin-bottom: 5px;
 }
 
-profile-list {
+/* profile-list {
   margin-left: 0;
   padding: 0;
-}
+  float: right;
+} */
 
 .account-avatar {
   width: 120px;
@@ -173,9 +174,11 @@ profile-list {
 
 .edit-profile-btn {
   float: right;
+  width: 100%;
 }
 
 .greeting {
   float: left;
   margin-bottom: 20px;
+  margin-right: 30px;
 }
