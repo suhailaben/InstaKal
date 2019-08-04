@@ -4,11 +4,6 @@ img {
   /*landing */
 .landing {
   position: relative;
-  /* background: url('./img/instagram.png') no-repeat; */
-  /* background-size: contain; */
-  /* background-repeat: no-repeat; */
-  /* background-position: left;  */
-  /* height: 100vh; */
   margin-top: -24px; 
   margin-bottom: -48px;
   background-color: #fafaf8; 
@@ -190,12 +185,17 @@ li {
   /* position: absolute; */
 }
 
+/* different */
 profile-list {
   margin: 30px;
   /* right: 0;
   top: 0; */
+  list-style: none;
+  padding: 30px;
+  font-size: 30px;
 }
 
+/* different */
 .account-avatar {
   width: 120px;
   margin: 10px 0px 10px 0px;
@@ -209,6 +209,7 @@ profile-list {
   margin-top: 10px;
 }
 
+/* different */
 /*.delete-account-btn {
   margin: 0px;
   float: right;
@@ -224,27 +225,20 @@ profile-list {
   background-color: gray;
 }
 
-/*.feeds-align {
+/* Please do not delete it */
+.feeds-align {
   float: right;
   height: auto;
   min-height: 550px;
   max-height: 650px; 
-}*/
+}
 
 .input-margin {
   margin: 10px;
   padding: 0px;
   width: 80%;
 }
-.card {
-  background-color: whitesmoke;
 
-}
-.profile-list {
-  list-style: none;
-  padding: 30px;
-  font-size: 30px;
-}
 .comment-avatar {
   width: 80%;
   max-width: 100px;
