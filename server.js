@@ -29,7 +29,7 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 // Create the first route.
-app.get('/', (req, res) => res.send('Hello World'));
+//app.get('/', (req, res) => res.send('Hello World'));
 
 // Add few more routes
 app.use('/api/users', users);
