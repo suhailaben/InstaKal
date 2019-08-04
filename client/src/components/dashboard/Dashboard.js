@@ -30,28 +30,21 @@ class Dashboard extends Component {
          <div>
           {/* Edited */}
            <div>
-             <div className=" col-lg-6 col-md-6 col-sm-6" >
-               <div className="lead text-muted greeting">
-                 {/* Edited */}
-                 Welcome <Link to={`/profile/${profile.handle}`}>{profile.name}</Link>            
+             
+               <div className="welcome-text" >
+               <em>Welcome <Link to={`/profile/${profile.handle}`}>{profile.name}</Link>!</em> <span />    
                </div> 
+            <div className="profile-list">
+              <ul>
+                  <li>{profile.status ? profile.status  : ''}{profile.company ? ` at ${profile.company}` : ''}</li> 
+                  <li>  {profile.location ? `Live in ${profile.location}` : ''}  </li>  
+                  <li><ProfileActions/></li>
+              </ul>
+            </div>
+             
              </div>
-             <div className="col-lg-6 col-md-6 col-sm-6">
-               <ProfileActions/>
-               <div className="profile-list">
-                 <section>{profile.status ? profile.status  : ''}{profile.company ? ` at ${profile.company}` : ''}</ section>
-                 <span>{profile.location ? `Live in ${profile.location}` : ''}</span>   
-               </div>
-             </div>         
-           </div>
-
-           {/* Edited
-           <div className="profile-list">
-             <div>{profile.status ? profile.status  : ''}{profile.company ? ` at ${profile.company}` : ''}</div>
-             <div>{profile.location ? `Live in ${profile.location}` : ''}</div>   
-           </div> */}
-
            <div style={{ marginBottom: '60px' }} />
+
            <button
              onClick={this.onDeleteClick.bind(this)}
              className="btn btn-danger red-btn"
@@ -80,13 +73,17 @@ class Dashboard extends Component {
        <div className="container">
          <div className="row">
            <div className="col-md-12">
-             <h2 className="display-4">My account</h2>
+             <div className="card card-body text-center  mb-3">
+             <h3 className="display-4">My account</h3>
+             <h2>{user.fullName}</h2>
                <img
+                 style={{position: "relative" }}
                  className="rounded-circle account-avatar"
                  src={user.avatar}
                  alt=""
                />
              {dashboardContent}
+           </div>
            </div>
          </div>
        </div>

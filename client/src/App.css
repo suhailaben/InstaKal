@@ -1,7 +1,7 @@
 img {
   width: 100%;
 }
-
+  /*landing */
 .landing {
   position: relative;
   /* background: url('./img/instagram.png') no-repeat; */
@@ -90,9 +90,9 @@ nav {
   font-family: 'Norican', cursive;
 }
 
-.profile-group {
-  /* width: 100%; */
-}
+ /*.profile-group {
+  width: 100%; 
+}*/
 
 .profile-title {
   padding: 10px 17px 17px 17px;
@@ -181,12 +181,15 @@ li {
 
 .account-avatar {
   width: 120px;
-  margin-top: 10px;
+  margin: 10px 0px 10px 0px;
+  position: absolute;
+  top:50%;
+  left:45%;
 }
 
-.edit-profile-btn {
+/*.edit-profile-btn {
   float: right;
-}
+}*/
 
 .greeting {
   float: left;
@@ -198,12 +201,21 @@ li {
   background-color: gray;
 }
 
-.feeds-align {
+/*.feeds-align {
   float: right;
-}
+}*/
 
 .input-margin {
   margin: 10px;
   padding: 0px;
   width: 80%;
+}
+.card {
+  background-color: whitesmoke;
+
+}
+.profile-list {
+  list-style: none;
+  padding: 30px;
+  font-size: 30px;
 }
