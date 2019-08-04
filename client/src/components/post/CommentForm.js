@@ -30,7 +30,7 @@ class CommentForm extends Component {
 
     const newComment = {
       text: this.state.text,
-      name: user.name,
+      name: user.userName,
       avatar: user.avatar
     };
 
@@ -48,10 +48,11 @@ class CommentForm extends Component {
     return (
       <div className="post-form mb-3">
         <div className="card card-info">
-          <div className="card-header bg-info text-white">
-            Make a comment...
+          <div className="card-header gray-btn" data-toggle="collapse" data-target="#demo">
+            <i class="fas fa-plus-square"> Make a comment...</i>
+            
           </div>
-          <div className="card-body">
+          <div className="card-body" id="demo" class="collapse">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
                 <TextAreaFieldGroup
@@ -62,7 +63,7 @@ class CommentForm extends Component {
                   error={errors.text}
                 />
               </div>
-              <button type="submit" className="btn btn-dark">
+              <button type="submit" className="btn gray-btn">
                 Submit
               </button>
             </form>

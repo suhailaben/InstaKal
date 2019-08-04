@@ -8,7 +8,7 @@ class ProfileHeader extends Component {
     return (
       <div className="row">
         <div className="col-md-12">
-          <div className="card card-body bg-info text-white mb-3">
+          <div className="card card-body lightgray-btn mb-3">
             <div className="row">
               <div className="col-4 col-md-3 m-auto">
                 <img
@@ -33,8 +33,9 @@ class ProfileHeader extends Component {
                     className="text-white p-2"
                     href={profile.website}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <i className="fas fa-globe fa-2x" />
+                    <i className="fas fa-globe fa-2x gray-icon" />
                   </a>
                 )}
  
@@ -43,8 +44,9 @@ class ProfileHeader extends Component {
                     className="text-white p-2"
                     href={profile.social.twitter}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <i className="fab fa-twitter fa-2x" />
+                    <i className="fab fa-twitter fa-2x gray-icon" />
                   </a>
                 )}
  
@@ -53,8 +55,9 @@ class ProfileHeader extends Component {
                     className="text-white p-2"
                     href={profile.social.facebook}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <i className="fab fa-facebook fa-2x" />
+                    <i className="fab fa-facebook fa-2x gray-icon" />
                   </a>
                 )}
  
@@ -63,8 +66,9 @@ class ProfileHeader extends Component {
                     className="text-white p-2"
                     href={profile.social.linkedin}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <i className="fab fa-linkedin fa-2x" />
+                    <i className="fab fa-linkedin fa-2x gray-icon" />
                   </a>
                 )}
  
@@ -73,8 +77,9 @@ class ProfileHeader extends Component {
                     className="text-white p-2"
                     href={profile.social.youtube}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <i className="fab fa-youtube fa-2x" />
+                    <i className="fab fa-youtube fa-2x gray-icon" />
                   </a>
                 )}
               </p>

@@ -47,10 +47,10 @@ class Dashboard extends Component {
 
            <button
              onClick={this.onDeleteClick.bind(this)}
-             className="btn btn-danger red-btn"
-           >
-             Delete My Account
-           </button>
+             className="btn btn-danger red-btn delete-account-btn"
+          >
+            Delete My Account
+          </button>
          </div>
        );
      } else {
@@ -58,6 +58,11 @@ class Dashboard extends Component {
        dashboardContent = (
          <div>
            {/* edited */}
+           <img
+              className="rounded-circle account-avatar"
+              src={user.avatar}
+              alt=""
+              />
            <div className="lead text-muted">Welcome {user.fullName}</div>
            <p>You have not yet setup a profile</p>
            <Link to="/create-profile" className="btn btn-lg btn-info">

@@ -183,7 +183,7 @@ router.post('/comment/:id',
         // Create a comment
         const newComment = {
           text: req.body.text,
-          name: req.body.name,
+          name: req.body.userName,
           avatar: req.body.avatar,
           user: req.user.id
         };
