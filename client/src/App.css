@@ -198,7 +198,9 @@ profile-list {
 
 .account-avatar {
   width: 120px;
-  margin: 10px;
+  margin: 10px 0px 10px 0px;
+  top:50%;
+  left:45%;
 }
 
 .edit-profile-btn {
@@ -207,7 +209,7 @@ profile-list {
   margin-top: 10px;
 }
 
-.delete-account-btn {
+/*.delete-account-btn {
   margin: 0px;
   float: right;
 }*/
