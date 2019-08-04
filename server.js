@@ -36,6 +36,7 @@ app.use('/api/users', users);
 app.use('/api/profile', profile);
 app.use('/api/posts', posts);
 
+   // deployment
 if (process.env.NODE_ENV === 'production'){
   // set static folder
   app.use(express.static('client/build'));
@@ -44,7 +45,7 @@ if (process.env.NODE_ENV === 'production'){
       res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
  } 
-
+  
 // Create a port
 const port = process.env.PORT || 5004;
 
