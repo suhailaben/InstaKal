@@ -27,20 +27,6 @@ const PostSchema = new Schema({
  avatar: {
    type: String
  },
-//  social: {  // added
-//    facebook: {
-//      type: Boolean,
-//      default: false
-//    },
-//    twitter: {
-//      type: Boolean,
-//      default: false
-//    },
-//    tumblr: {
-//      type: Boolean,
-//      default: false
-//    }
-//  },
  likes: [
    {
      user: {
